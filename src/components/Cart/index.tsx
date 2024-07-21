@@ -12,6 +12,7 @@ export const Cart = () => {
       <ul>
         {items.map((item) => (
           <div
+            key={item.uuid}
             style={{
               display: "flex",
               justifyContent: "space-between",
@@ -28,7 +29,7 @@ export const Cart = () => {
               {item.name} - ${item.price}
             </li>
             <button
-              onClick={() => useCartStore.getState().removeFromCart(item.id)}
+              onClick={() => useCartStore.getState().removeFromCart(item.uuid)}
             >
               Remove
             </button>

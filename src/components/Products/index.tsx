@@ -11,7 +11,7 @@ export const Products = () => {
       <h1>Choose your Products</h1>
       <div>
         <ul>
-          {items.map((item, index) => (
+          {items.map((item) => (
             <div
               style={{
                 display: "flex",
